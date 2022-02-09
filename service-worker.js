@@ -1,7 +1,7 @@
 const APP_PREFIX ="FoodFest-";
 const VERSION = "version-01";
 const CACHE_NAME = APP_PREFIX + VERSION;
-const FILES_TO_CACHE =[
+const FILES_TO_CACHE = [
     "./index.html",
     "./events.html",
     "./tickets.html",
@@ -10,10 +10,11 @@ const FILES_TO_CACHE =[
     "./assets/css/bootstrap.css",
     "./assets/css/tickets.css",
     "./dist/app.bundle.js",
-    "./dist/event.bundle.js",
+    "./dist/events.bundle.js",
     "./dist/tickets.bundle.js",
     "./dist/schedule.bundle.js"
-]
+  ];
+
 self.addEventListener('install',function(e){
     e.waitUntil(
         caches.open(CACHE_NAME).then(function(cache){
